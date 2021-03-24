@@ -89,7 +89,7 @@
 	const consolelogfunc = console.log;
 	console.log = function() {
 		consolelogfunc.apply(console, arguments);
-		document.body.innerHTML += "<pre>" + arguments(0) + "</pre>";
+		document.body.innerHTML += "<pre>" + arguments[0] + "</pre>";
 	};
 			
 		console.log("random GUID");
