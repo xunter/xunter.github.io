@@ -86,6 +86,12 @@
             return pwd;
         }
 
+	const consolelogfunc = console.log;
+	console.log = function() {
+		consolelogfunc.apply(console, arguments);
+		document.body.innerHTML += "<pre>" + arguments(0) + "</pre>";
+	};
+			
 		console.log("random GUID");
 
 		const newGuid = uuidv4();
